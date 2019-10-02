@@ -1,0 +1,116 @@
+{
+  "users": [
+    {
+      "name": "Mark",
+      "age": 25,
+      "email": "mark@example.com",
+      "country": "USA"
+    },
+    {
+      "name": "Vova",
+      "age": 22,
+      "email": "John@example.com",
+      "country": "Zakarputec"
+    },
+    {
+      "name": "Marik",
+      "age": 20,
+      "email": "marik@example.com",
+      "country": "Ukraine"
+    },
+    {
+      "name": "Nazar",
+      "age": 25,
+      "email": "Nazar@example.com",
+      "country": "Czech Republic"
+    },
+    {
+      "name": "Andrii",
+      "age": 21,
+      "email": "Andrii@example.com",
+      "country": "Ukraine"
+    },
+    {
+      "name": "Anna",
+      "age": 19,
+      "email": "Anna@example.com",
+      "country": "UK"
+    },
+    {
+      "name": "Alex",
+      "age": 30,
+      "email": "Alex@example.com",
+      "country": "USA"
+    },
+    {
+      "name": "Olena",
+      "age": 22,
+      "email": "Olena@example.com",
+      "country": "Poland"
+    },
+    {
+      "name": "Yura",
+      "age": 21,
+      "email": "Yura@example.com",
+      "country": "Poland"
+    },
+    {
+      "name": "Vasyl",
+      "age": 17,
+      "email": "Vasyl@example.com",
+      "country": "Ukraine"
+    }
+  ],
+  "films": [
+    {
+      "name": "Robocop",
+      "genre": "Fantastic",
+      "year": 1987
+    },
+    {
+      "name": "Titanic",
+      "genre": "Fantastic",
+      "year": 1997
+    },
+    {
+      "name": "JOHN WICK: CHAPTER 3",
+      "genre": "Action",
+      "year": 2019
+    },
+    {
+      "name": "Avengers",
+      "genre": "Action",
+      "year": 2012
+    },
+    {
+      "name": "Fast & Furious",
+      "genre": "Action",
+      "year": 2017
+    },
+    {
+      "name": "Avatar",
+      "genre": "Fantastic",
+      "year": 2009
+    },
+    {
+      "name": "Star Wars: The Force Awakens",
+      "genre": "Fantastic",
+      "year": 2017
+    },
+    {
+      "name": "Harry Potter and the Deathly Hallows",
+      "genre": "Action",
+      "year": 2011
+    },
+    {
+      "name": "Black Panther",
+      "genre": "Action",
+      "year": 2018
+    },
+    {
+      "name": "007:Cpectr",
+      "genre": "Triller",
+      "year": 2015
+    }
+  ]
+}

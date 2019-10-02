@@ -1,0 +1,93 @@
+<template >
+<div class="rectangle">
+    <li v-for="(name,index) in filteredFilmNames" :key="index" @click="addmovie(name)"><a >{{name}}</a></li>
+</div>
+    
+
+</template>
+
+<script>
+import {mapGetters} from 'vuex'
+import UserModel from '../models/UserModel';
+
+export default{
+    props:{
+        user:UserModel
+    },
+    computed:{
+    ...mapGetters(['filmNames']),
+
+    filteredFilmNames(){
+      let newFilm=[...this.filmNames]
+      for(let i=0;i<newFilm.length;i++){
+        for (let j=0;j<this.user.films.length;j++){
+            if (newFilm[i]===this.user.films[j]){
+                newFilm.splice(i,1)
+                i--
+                //delete newFilm[i]
+             }
+
+          }
+        
+
+        }
+        return newFilm
+    } 
+    },
+    methods:{
+        addmovie(name){
+          this.$emit('addFilm',name)
+          
+          //console.log(name)
+        }
+    }
+}
+
+</script>
+<style scoped>
+.rectangle {
+counter-reset: li; 
+list-style: none; 
+font: 14px "Trebuchet MS", "Lucida Sans";
+padding: 0;
+text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+.rectangle a {
+position: relative;
+display: block;
+padding: .4em .4em .4em .8em;
+margin: .5em 0 .5em 2.5em;
+background: #D3D4DA;
+color: #444;
+text-decoration: none;
+transition: all .3s ease-out;
+}
+.rectangle a:hover {background: #DCDDE1;}       
+.rectangle a:before {
+content: counter(li);
+counter-increment: li;
+position: absolute;
+left: -2.5em;
+top: 50%;
+margin-top: -1em;
+background: #9097A2;
+height: 2em;
+width: 2em;
+line-height: 2em;
+text-align: center;
+font-weight: bold;
+}
+.rectangle a:after {
+position: absolute;
+content: "";
+border: .5em solid transparent;
+left: -1em;
+top: 50%;
+margin-top: -.5em;
+transition: all .3s ease-out;
+}
+.rectangle a:hover:after {
+left: -.5em;
+border-left-color: #9097A2;
+}
+</style>
