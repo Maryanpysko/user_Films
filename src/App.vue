@@ -1,28 +1,29 @@
 <template>
- <table>
-    <thead>
+<div>
+   <table>
+      <thead>
        
-       <tr>
-          <th v-for="(key,index) in columns"
-          :key='index'>{{key}}
+         <tr>
+            <th v-for="(key,index) in columns"
+            :key='index'>{{key}}
           
           </th>
-       </tr>
-    </thead>
+         </tr>
+      </thead>
     <tbody>
       <UserItem v-for="(usermodel,index) in users" :key="index" :usermodel="usermodel" /> 
-     
-      
-      
     </tbody>
     
- </table>
- 
+   </table>
+  
+   <Messages/>
+  
+ </div>
 </template>
 
 <script>
 import UserItem from './components/UserItem'
-import FilmItem from './components/FilmItem'
+import Messages from './components/Messages'
 import {mapGetters} from 'vuex'
 
 export default{
@@ -32,8 +33,8 @@ export default{
      }
   },
    mounted() {
-      this.$store.dispatch('getUsers')
-      this.$store.dispatch('getFilms')
+      this.$store.dispatch('initializeData')
+         
    },
    computed:{
       ...mapGetters(['users','films'])
@@ -41,8 +42,7 @@ export default{
    },
    components:{
       UserItem,
-      FilmItem
-      
+      Messages
       
    }
    

@@ -5,7 +5,7 @@
           <td>{{ usermodel.age }}</td>
           <td>{{ usermodel.email }}</td>
           <td>{{ usermodel.country }}</td>
-          <td><FilmItem :films="usermodel.films" /></td> 
+          <td><FilmItem :films="usermodel.films" :user="usermodel" /></td> 
     
         </tr>
       
